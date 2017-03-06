@@ -45,6 +45,12 @@ get_header(); ?>
 
 		</div>
 
+		<div class="row">
+			<div class="small-12 small-centered medium-4 column">
+				<a class="button expanded" href="#">More...</a>
+			</div>
+		</div>
+
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php
 		if ( function_exists( 'foundationpress_pagination' ) ) :
