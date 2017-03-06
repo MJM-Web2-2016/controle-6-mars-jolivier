@@ -14,7 +14,15 @@
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<div class="row">
+					<div class="small-12 medium-6 columns">
+						<?php foundationpress_footer(); ?>
+					</div>
+					<div class="small-12 medium-6 columns">
+						<p class="text-right">Copyright © 2006-2016 Adobe Systems Incorporated.</p>
+						<?php //dynamic_sidebar( 'footer-widgets' ); ?>
+					</div>
+				</div>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>
