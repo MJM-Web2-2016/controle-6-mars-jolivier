@@ -11,18 +11,25 @@
 ?>
 <div class="column column-block">
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
-  <a href="<?php the_permalink(); ?>">
+<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry gallery'); ?>>
     <figure class="gallery-item">
-      <figcaption>
-    		<h4><?php the_title(); ?></a></h4>
-    		<?php foundationpress_entry_meta(); ?>
-    	</figcaption>
+      <a class="gallery-link" href="<?php the_permalink(); ?>"></a>
+        <figcaption>
+      		<h4 class="text-center"><?php the_title(); ?></a></h4>
+          <p class="text-center"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></p>
+      	</figcaption>
     <?php get_template_part('template-parts/cover'); ?>
     </figure>
-  </a>
-	<footer>
-		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+	<footer class="gallery-info">
+    <img class="avatar" src="<?php the_field( 'avatar_user' ); ?>"/>
+    <div class="post-data">
+      <i class="fa fa-eye view"></i>
+      <p><?php the_field( 'views' ); ?></p>
+    </div>
+    <div class="post-data like">
+      <i class="fa fa-thumbs-up"></i>
+      <p><?php the_field( 'likes' ); ?></p>
+    </div>
 	</footer>
 </div>
 

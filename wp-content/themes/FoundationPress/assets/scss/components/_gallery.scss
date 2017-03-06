@@ -1,15 +1,107 @@
 .gallery {
-  height: 165px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+
+  figure.gallery-item {
+    position: relative;
+    z-index: 1;
+    height: 220px;
+    overflow: hidden;
+
+    a.gallery-link {
+      position: absolute;
+      z-index: 5;
+      top:0;
+      left:0;
+      width: 100%;
+      height:100%;
+    }
+
+    figcaption {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      top:0;
+      left:0;
+      width:100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+
+      h4 {
+        color:get-color(primary);
+        font-weight: 500;
+      }
+
+      p {
+        color:#e8e8e8;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  figure.gallery-item:hover figcaption {
+    opacity: 1;
+  }
 }
 
-figure.gallery-item {
+.tag-featured:after {
+  content:'';
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left:15px;
+  width:20px;
+  height:38px;
+  background: url(../../assets/images/featured.png) no-repeat;
+}
+
+.tag-view .view i {
+  color:get-color(primary);
+}
+.tag-like .like i {
+  color:get-color(primary);
+}
+
+footer.gallery-info {
   position: relative;
-  figcaption {
+  border-top:1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  .avatar {
+    width: 53px;
+    height: 53px;
+    border:3px solid #ffffff;
+    border-radius: 50px;
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
+    z-index: 5;
+    top:-25px;
+    left:50%;
+    margin-left: -25px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
+
+  .post-data {
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #e8e8e8;
+    p {
+      margin-bottom:0;
+    }
+  }
+  .post-data:last-child {border-right:0;}
 }
