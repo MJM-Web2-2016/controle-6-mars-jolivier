@@ -9,17 +9,21 @@
  */
 
 ?>
+
+<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'visuel-listing' );?>
+
+<?php if (has_post_thumbnail()): ?>
+
 <div class="column column-block">
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry gallery'); ?>>
 
-    <figure class="gallery-item">
+    <figure class="gallery-item" style="background-image: url('<?php echo $thumb['0'];?>')">
       <a class="gallery-link" href="<?php the_permalink(); ?>"></a>
         <figcaption>
       		<h5><?php the_title(); ?></a></h5>
           <p><?php the_category( ', ' ); ?></p>
       	</figcaption>
-    <?php get_template_part('template-parts/cover'); ?>
     </figure>
 
 	<footer class="gallery-info">
@@ -37,5 +41,7 @@
 	</footer>
 
 </div>
+
+<?php endif; ?>
 
 </div>

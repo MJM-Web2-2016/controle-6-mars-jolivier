@@ -18,20 +18,22 @@ get_header(); ?>
 <div id="page-full-width" role="main">
 	<article class="main-content">
 
-			<div class="row column">
+		<div class="row">
+			<div class="column">
 				<div class="filtrer">
-					<div class="stacked-for-small button-group">
+					<div class="stacked-for-medium button-group">
 					  <a class="button">Projects</a>
-					  <a class="button">All Creative Fields</a>
-					  <a class="button">Most Appreciated</a>
-					  <a class="button">Worldwide</a>
+					  <a class="button hollow button secondary">All Creative Fields</a>
+					  <a class="button hollow button secondary">Most Appreciated</a>
+					  <a class="button hollow button secondary">Worldwide</a>
 					</div>
 				</div>
 			</div>
+		</div>
 
 	<?php if ( have_posts() ) : ?>
 
-		<div class="row small-up-1 medium-up-3 large-up-4 xxlarge-up-6">
+		<div class="row small-up-1 medium-up-2 xmedium-up-3 large-up-4 xxlarge-up-6">
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

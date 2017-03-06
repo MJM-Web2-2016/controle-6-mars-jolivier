@@ -6,3 +6,21 @@
   border-radius: 3px;
   border: none;
 }
+
+.filtrer {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+  .button-group {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    .button {
+      margin: 0 0.5rem;
+      border-radius: 3px;
+    }
+    .hollow, .hollow:hover {
+      border-color: #e8e8e8;
+    }
+  }
+}
