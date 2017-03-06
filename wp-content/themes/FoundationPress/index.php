@@ -23,9 +23,9 @@ get_header(); ?>
 				<div class="filtrer">
 					<div class="stacked-for-medium button-group">
 					  <a class="button">Projects</a>
-					  <a class="button hollow button secondary">All Creative Fields</a>
-					  <a class="button hollow button secondary">Most Appreciated</a>
-					  <a class="button hollow button secondary">Worldwide</a>
+					  <a class="button hollow secondary">All Creative Fields</a>
+					  <a class="button hollow secondary">Most Appreciated</a>
+					  <a class="button hollow secondary">Worldwide</a>
 					</div>
 				</div>
 			</div>
