@@ -39,10 +39,16 @@
 			<div class="top-bar-left">
 				<ul class="menu">
 					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+					<li class="search"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+				<ul class="menu">
+					<li class="notifications"><a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+					<li class="messsages"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+					<?php foundationpress_top_bar_r(); ?>
+					<li class="avatar"><a href="#"><?php echo get_avatar( get_the_author_meta( 'ID' ), 20 ); ?></a></li>
+				</ul>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
