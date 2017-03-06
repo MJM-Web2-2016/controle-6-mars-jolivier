@@ -12,18 +12,22 @@
 <div class="column column-block">
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry gallery'); ?>>
+
     <figure class="gallery-item">
       <a class="gallery-link" href="<?php the_permalink(); ?>"></a>
         <figcaption>
-      		<h4 class="text-center"><?php the_title(); ?></a></h4>
-          <p class="text-center"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></p>
+      		<h5><?php the_title(); ?></a></h5>
+          <p><?php the_category( ', ' ); ?></p>
       	</figcaption>
     <?php get_template_part('template-parts/cover'); ?>
     </figure>
+
 	<footer class="gallery-info">
-    <img class="avatar" src="<?php the_field( 'avatar_user' ); ?>"/>
-    <div class="post-data">
-      <i class="fa fa-eye view"></i>
+    <div class="avatar">
+      <img src="<?php the_field( 'avatar_user' ); ?>"/>
+    </div>
+    <div class="post-data view">
+      <i class="fa fa-eye"></i>
       <p><?php the_field( 'views' ); ?></p>
     </div>
     <div class="post-data like">
@@ -31,6 +35,7 @@
       <p><?php the_field( 'likes' ); ?></p>
     </div>
 	</footer>
+
 </div>
 
 </div>
